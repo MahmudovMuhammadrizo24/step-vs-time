@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.container .box {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 80px;
+    height: 40px;
+    background-color: #d2d2d2;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.button::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.20s;
+}
+
+.checkbox:checked+.button {
+    background-color: black;
+}
+
+.checkbox:checked+.button::before {
+    transform: translateX((40px));
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked+.button::before {
+    transform: translateX(40px);
+    animation-name: toggle;
+    animation-duration: 0.28s;
+    transition-delay: 0.20s;
+}
+
+@keyframes toggle {
+    0% {
+        width: 30px;
+        height: 30px;
+    }
+
+    25% {
+        width: 30px;
+        height: 30px;
+    }
+
+    50% {
+        width: 30px;
+        height: 30px;
+    }
+
+    75% {
+        width: 30px;
+        height: 30px;
+    }
+
+    100% {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.container {
+    width: 500px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.schet {
+    width: 50px;
+    height: 50px;
+    border: 3px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.incriment {
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    border: solid 3px blue;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.dicriment {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    background-color: black;
+    border: solid 3px blue;
+    color: blue;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.x {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+    border: solid 3px blue;
+}
+
+.step_time {
+    display: flex;
+    gap: 20px;
+}
+
+.time {
+    width: 100px;
+    height: 40px;
+    padding-left: 10px;
+    border: 3px solid blue;
+}
+
+.step {
+    width: 100px;
+    height: 40px;
+    padding-left: 10px;
+    border: 3px solid blue;
+}
